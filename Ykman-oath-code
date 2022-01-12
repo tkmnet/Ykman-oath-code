@@ -1,0 +1,9 @@
+#!/bin/sh
+
+list=$(ykman oath code)
+echo "$list" | awk '{print NR,"\t",$0}'
+echo -n "Select number to set clipboard: "
+read n
+if [ "$n" != "" ]; then
+echo "$list" | awk "NR==$n{printf \$2}" | xclip -selection c
+fi
