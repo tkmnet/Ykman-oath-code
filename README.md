@@ -10,7 +10,7 @@ Select number to set clipboard:  # OTP is set to the clipboard by typing the num
 ```
 
 ## Installation
-Put `Ykman-oath-code` on a directory included PATH which `/usr/local/bin`.
+Put `Ykman-oath-code` on a directory included PATH which likes `/usr/local/bin`.
 ```sh
 cd /usr/local/bin
 sudo wget https://raw.githubusercontent.com/tkmnet/rwd/main/Ykman-oath-code
