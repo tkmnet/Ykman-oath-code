@@ -1,6 +1,8 @@
 # Ykman-oath-code
 ykman oath code getter command wrapper with clipboard
 
+You can copy OTP that registered in your Yubikey, to the clipboard of X Window System.
+
 ## Usage
 ```sh
 $ Ykman-oath-code  # Maybe it will be suggested Y<Tab>.
@@ -8,6 +10,10 @@ $ Ykman-oath-code  # Maybe it will be suggested Y<Tab>.
 2       GitHub  123456
 Select number to set clipboard:  # OTP is set to the clipboard by typing the number on the left.
 ```
+
+## Requirements
++ yubikey-manager
++ xclip
 
 ## Installation
 Put `Ykman-oath-code` on a directory included PATH which likes `/usr/local/bin`.
