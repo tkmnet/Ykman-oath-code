@@ -1,9 +1,19 @@
 #!/bin/sh
 
+res=1
+if [ $(ykman -v | head -n 1 | sed -E 's/.* (.).*/\1/') -le 3 ];then
 list=$(ykman oath code)
+res=$?
+else
+list=$(ykman oath accounts code)
+res=$?
+fi
+
+if [ $res -eq 0 ];then
 echo "$list" | awk '{print NR,"\t",$0}'
 echo -n "Select number to set clipboard: "
 read n
 if [ "$n" != "" ]; then
 echo "$list" | awk "NR==$n{printf \$2}" | xclip -selection c
+fi
 fi
